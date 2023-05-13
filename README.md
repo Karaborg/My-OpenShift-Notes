@@ -46,6 +46,18 @@ oc get users
 # create a user by loginnig with the username from web console
 oc get users
 oc adm policy add-cluster-role-to-user cluster-admin <USER>
+
+# to rollback
+oc rollout latest dc/<DEPLOYMENT_NAME>
+
+oc rollout history dc/<DEPLOYMENT_NAME>
+
+oc rollout describe dc <DEPLOYMENT_NAME>
+
+oc rollout undo dc/<DEPLOYMENT_NAME>
+
+# get pod IP's
+oc get pods -o wide
 ```
 
 ## OpenShift REST API
