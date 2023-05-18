@@ -13,6 +13,8 @@ This is me taking notes on GitHub while learning `OpenShift`. I will probably be
 > If you still have an issue after enabling ***VT-X/AMD-v***, you also need to enable `Virtual Machine Platform` and `Windows Hypervisor Platform` from ***Windows Features***.
 > If that didn't work, open console, enter the command `bcdedit` and check if `hypervisorlaunchtype` is auto or on. If so, disable it by entering the command `bcdedit /set hypervisorlaunchtype off` and restart your computer.
 
+> If you are using `Docker`, setting hypervisorlaunchtype off will brake it. To fix, simply turn on hypervisorlaunchtype by `bcdedit /set hypervisorlaunchtype auto` and restart.
+
 # Manage OpenShift
 You can manage OpenShift by ***Web Console***, ***CLI*** and ***REST API***
 
